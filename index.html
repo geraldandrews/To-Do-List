@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <header>
+        <h1>My Todo List</h1>
+    </header> 
+
+    <form>
+        <input type="text" class="task-input">
+        <button class="task-btn" type="submit">
+            <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="status">
+            <select name="status-selections" class="selections">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
+        </div>
+    </form>
+
+    <div class="task-container">
+        <ul class="task-list"></ul>
+    </div>
+
+    <footer>
+        <p>Created and designed by <a href="https://geraldandrewsmedia.netlify.app/" target="_blank">Gerald Andrews Media</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
