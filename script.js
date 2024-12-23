@@ -83,7 +83,7 @@ function selection(e) {
                     task.style.display = 'none';
                 }
                 break;
-            case 'notcompleted':
+            case 'incomplete':
                 if (!task.classList.contains('completed')) {
                     task.style.display = 'flex';
                 } else {
@@ -104,7 +104,7 @@ function saveLocalTasks(task) {
     }
     let data = {
         task: task,
-        status: 'notcompleted'
+        status: 'incomplete'
     };
     tasks.push(data);
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -181,11 +181,11 @@ function markCompleted(task) {
     }
     const taskIndex = task.children[0].innerText;
     let index = tasks.findIndex(obj => obj.task == taskIndex);
-    if (tasks[index].status === 'notcompleted') {
+    if (tasks[index].status === 'incomplete') {
         tasks[index].status = 'completed';
         localStorage.setItem('tasks', JSON.stringify(tasks));
     } else {
-        tasks[index].status = 'notcompleted';
+        tasks[index].status = 'incomplete';
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 }
